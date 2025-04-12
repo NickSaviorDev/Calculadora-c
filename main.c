@@ -19,7 +19,7 @@ int main() {
         int option, check_zero = 1;
         float num1, num2, result;
         char op[2];
-        char repeat;
+        char repeat[2];
 
         printf(
             "===============================\n"
@@ -91,11 +91,11 @@ int main() {
 
         while (1) {
             printf("Deseja realizar outra operação? (s/n): ");
-            scanf(" %c", &repeat);
-            if (repeat == 'n' || repeat == 'N') {
+            scanf(" %s", repeat);
+            if (repeat[0] == 'n' || repeat[0] == 'N') {
                 printf("Obrigado por usar a calculadora! Até a próxima.");
                 return 0;
-            } else if (repeat == 's' || repeat == 'S') {
+            } else if (repeat[0] == 's' || repeat[0] == 'S') {
                 system("cls");
                 break;
             } else {
